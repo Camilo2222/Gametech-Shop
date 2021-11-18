@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background:whitesmoke;
+    color: black;
+    font-family: 'roboto', sans-serif;
+}
+.contenedor{
+   
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto 598px;
+    grid-template-areas: "header    header  header"
+                         "menu      menu    menu"
+                         "contenido contenido contenido"
+                         "footer    footer  footer";
+}
+.contenedor .header{ 
+    background: black;
+    color: white;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 350px 1fr 250px;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "leftcontent centercontent rightcontent";
+}
+.contenedor .header .leftcontent{
+    display: flex;
+    grid-area: leftcontent;
+    justify-content: start;
+}
+.contenedor .header .centercontent{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    grid-area: centercontent;
+}
+.contenedor .header .rightcontent{
+    display: flex;
+    align-items: center;    
+    justify-content: start;
+    grid-area: rightcontent;
+}
+.contenedor .header .rightcontent .botones>a{
+    color: white;
+    padding: 5px 5px;
+    
+}
+.contenedor .header .rightcontent .carrito{
+    padding: 5px 5px;
+}
+.contenedor .menu{
+    background-color: white;
+    grid-area: menu;
+    display: flex;
+    align-items: center;
+    border: 3px solid black;
+}
+.contenedor .menu>a{
+    color: black;
+    padding: 5px 10px ;
+}
+.contenedor >.header >.leftcontent>.img1{
+    width: 350px;
+}
+
+.contenedor .contenido{
+    background-color: white;
+    text-align: center;
+    grid-area: contenido;
+}
+.contenedor .footer{
+    background: #444;
+    text-align: center;
+    grid-area: footer;
+}
+@media screen and (max-width: 660px){
+    .contenedor .header{
+        grid-template-areas: "leftcontent" 
+                             "centercontent"
+                             "rightcontent";
+    }
+}
+.searchinput{
+    width: 500px;
+    height: 25px;
+    border-radius: 40px;
+    border-style: solid;
+    border-color: black;
+}
+
+@media screen and (max-width: 340px){
+    .contenedor >.header >.leftcontent>.img1{
+        width: 200px;
+    }
+}
+@media screen and (max-width: 1088px){
+    .searchinput{
+        width: auto;
+        border-radius: 10px;
+            }
+}
+@media screen and (max-width:512px){
+    .contenedor .header .centercontent{
+     justify-content:start ;
+    }
+    
+}
