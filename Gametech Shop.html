@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gametech Shop</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link ref="import" href="./eventos.html">
+        <style type="text/css">
+            body {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                background: #dadada; 
+            }
+
+            body > * {
+                width: 100%;
+                border: 1px solid #000;
+                border-bottom-width: 0;
+                box-sizing: border-box;
+                text-align: center;
+            }
+
+            body > *:last-child {
+                border-bottom-width: 1px;
+
+            }
+            header{
+                background: #FFAAFF;
+            }
+
+            header,
+            footer {
+                min-height: 100px;
+            }
+
+            aside {
+                width: 25%;
+                border: 0 solid #000;
+                border-right-width: 1px;
+                background:#ff7f50;
+            }
+            .camilo{
+                position: relative;
+               right: 50%;
+            }
+            .henry{
+                position: relative;
+               right: 40%;
+               height: 200px;
+               top:45px;
+            }
+            .juan{
+                position: relative;
+                
+               right: 40%;
+               height: 200px;
+               top:45px;
+               
+            }
+            .jaider{
+                position: relative;
+               right: 40%;
+               height: 200px;
+               top:45px;
+            }
+
+            .container .body {
+                width: 75%;
+            }
+            .body{
+                background: #ffffff;
+            }
+            .container {
+                display: flex;
+                min-height: 300px;
+            }
+            #foot{
+                background:#90ee90;
+            }
+            li{
+                list-style:none;
+            }
+            iframe{
+                margin:0; padding:0; height:100%;
+                display:block; width:100%; border:none; 
+            }
+        </style>
+        <script type="text/javascript">
+
+            function pintar(key) {
+
+                switch (key) {
+                    case 0:
+                        document.getElementById("muestra").innerHTML = '';
+                        break;
+                    case 1:
+                        document.getElementById("muestra").innerHTML = '<Imagenes Gametech/Camilo Yepes.jpg"/>';
+                        break;
+                    case 2:
+                        document.getElementById("muestra").innerHTML = '<img src="Imagen2.jpg"/>';
+
+                        break;
+                    case 3:
+                        document.getElementById("muestra").innerHTML = '<img src=Imagen3.jpg"/>';
+
+                        break;
+                    case 4:
+                        document.getElementById("muestra").innerHTML = "<img src='Imagen4.jpg'/>";
+
+                        break;
+                    case 7:
+                        document.getElementById("muestra").innerHTML = "<img src='Imagen5.jpg'>";
+
+                        break;						
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <header>Header</header>    
+            <div class="container">
+                <aside>
+                    <h5 onclick="pintar(0)">MENU</h5>
+                    <ol>
+                        <li onclick="pintar(1)">Gametech Shop</li>
+                        <li onclick="pintar(2)">Camilo Andres Ocampo Yepes</li>
+                        <li onclick="pintar(3)">Henry Alejandro Martinez Castellanos</li>
+                        <li onclick="pintar(4)">Juan David Caro Diaz</li>	
+                        <li onclick="pintar(5)">Jaider Medina</li>						
+                    </ol>
+                </aside>
+                <section id="muestra" class="body">
+                    <section id="muestra" class="body">Body</section>
+                <img class="camilo" src="Imagenes Gametech/Camilo Yepes.jpg">
+                <img class="henry" src="Imagenes Gametech/Henry Martinez.jpg">
+                <img class="juan" src="Imagenes Gametech/DAVID CARO.jpeg">
+                <img class="jaider" src="Imagenes Gametech/jaider.jpeg">
+                </section>
+            </div>
+            <footer id="foot">Footer
+
+            </footer>
+        </div>
+    </body>
+</html>
